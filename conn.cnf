@@ -1,0 +1,6 @@
+ [client]
+ database=DD_db
+ user=root
+ password=passcode
+ HOST=localhost
+ default-charset=utf8

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head><title>{{title}}</title></head>
+<body>
+<h1>Hello {{user}}</h1>
+<table border=5>
+<tr>
+{% for header in cols %}
+<td>
+{{header}}
+</td>
+{% endfor %}
+</tr>
+{% for row in rows %}
+    <tr>
+           <td> {{row.IDS}}</td>
+           <td> {{row.EMAIL}}</td>
+           <td> {{row.PHONE}}</td>
+           <td> {{row.FILENAME}}</td>
+           <td> {{row.STATUS}}</td>
+           <td> <a href="../view?id={{row.id}}">View</a></td>
+           <td> <a href="../Approve?id={{row.id}}">Approve | </a><a href="../Reject?id={{row.id}}">Reject</a></td>
+    </tr> 
+{% endfor %}
+</table>
+</body>
+</html>
